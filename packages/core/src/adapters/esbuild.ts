@@ -4,7 +4,7 @@
  * @module
  */
 
-import { Starter } from './index'
+import { Starter } from '../index'
 
 /**
  * Esbuild plugin
@@ -19,4 +19,5 @@ import { Starter } from './index'
  */
 const esbuild = Starter.esbuild as typeof Starter.esbuild
 export default esbuild
-export { esbuild as 'module.exports' }
+export { esbuild as } from 'module.exports'
+}

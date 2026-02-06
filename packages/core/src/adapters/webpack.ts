@@ -4,7 +4,7 @@
  * @module
  */
 
-import { Starter } from './index'
+import { Starter } from '../index'
 
 /**
  * Webpack plugin
@@ -21,4 +21,5 @@ import { Starter } from './index'
  */
 const webpack = Starter.webpack as typeof Starter.webpack
 export default webpack
-export { webpack as 'module.exports' }
+export { webpack as } from 'module.exports'
+

@@ -4,7 +4,7 @@
  * @module
  */
 
-import { Starter } from './index'
+import { Starter } from '../index'
 
 /**
  * Vite plugin
@@ -21,4 +21,4 @@ import { Starter } from './index'
  */
 const vite = Starter.vite as typeof Starter.vite
 export default vite
-export { vite as 'module.exports' }
+export { vite as } from 'module.exports'
