@@ -79,7 +79,7 @@ packages:
 **API Usage**:
 ```typescript
 createUnplugin((options) => ({
-  name: 'unplugin-tw-classname',
+  name: 'tw-compose',
   transform: { /* ... */ }
 }))
 ```
@@ -315,22 +315,22 @@ pnpm format
 ### Package-Specific Commands
 ```bash
 # Build only the plugin
-pnpm --filter unplugin-tw-classname build
+pnpm --filter tw-compose build
 
 # Run example in dev mode
 pnpm --filter @examples/vite-react dev
 
 # Run plugin tests (single run)
-pnpm --filter unplugin-tw-classname test --run
+pnpm --filter tw-compose test --run
 
 # Run plugin tests (watch mode)
-pnpm --filter unplugin-tw-classname test
+pnpm --filter tw-compose test
 
 # Type check plugin only
-pnpm --filter unplugin-tw-classname typecheck
+pnpm --filter tw-compose typecheck
 
 # Lint plugin only
-pnpm --filter unplugin-tw-classname lint
+pnpm --filter tw-compose lint
 ```
 
 ### Development Workflow
@@ -339,13 +339,13 @@ pnpm --filter unplugin-tw-classname lint
 pnpm install
 
 # Build plugin
-pnpm --filter unplugin-tw-classname build
+pnpm --filter tw-compose build
 
 # Start example (requires plugin build first)
 pnpm --filter @examples/vite-react dev
 
 # Run tests in watch mode
-pnpm --filter unplugin-tw-classname test
+pnpm --filter tw-compose test
 
 # Build everything
 pnpm build

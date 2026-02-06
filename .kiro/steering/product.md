@@ -4,13 +4,13 @@ inclusion: always
 
 # Product Overview
 
-unplugin-tw-classname is a production-ready, universal build plugin that transforms responsive Tailwind CSS syntax at build time with zero runtime overhead. Built on the unplugin framework, it provides seamless compatibility across all major JavaScript build tools.
+tw-compose is a production-ready, universal build plugin that transforms responsive Tailwind CSS syntax at build time with zero runtime overhead. Built on the unplugin framework, it provides seamless compatibility across all major JavaScript build tools.
 
 ## Project Status
 
 **Status**: ✅ Production Ready (v1.0.0)  
 **Architecture**: Turborepo monorepo with pnpm workspaces  
-**Repository**: https://github.com/yeasin2002/unplugin-tw-classname-protoype
+**Repository**: https://github.com/yeasin2002/tw-compose-protoype
 
 ## What It Does
 
@@ -65,7 +65,7 @@ tw('text-xl font-bold', { md: 'text-2xl', lg: 'text-3xl' })
 - ✅ Production-ready package configuration
 
 ### Package Details
-- **Name**: unplugin-tw-classname
+- **Name**: tw-compose
 - **Version**: 1.0.0
 - **Bundle Size**: ~8.26 KB (gzipped: ~3.5 KB)
 - **Runtime Impact**: 0 KB (build-time only)
@@ -106,13 +106,13 @@ tw('text-xl font-bold', { md: 'text-2xl', lg: 'text-3xl' })
 
 ### Installation
 ```bash
-npm install -D unplugin-tw-classname
+npm install -D tw-compose
 ```
 
 ### Basic Usage (Vite)
 ```typescript
 // vite.config.ts
-import twClassname from 'unplugin-tw-classname/vite'
+import twClassname from 'tw-compose/vite'
 
 export default defineConfig({
   plugins: [twClassname()],
@@ -121,7 +121,7 @@ export default defineConfig({
 
 ### In Your Components
 ```tsx
-import { tw } from 'unplugin-tw-classname/api'
+import { tw } from 'tw-compose/api'
 
 function Component() {
   return (
