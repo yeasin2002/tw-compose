@@ -1,9 +1,4 @@
 # cls-extended
-
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Unit Test][unit-test-src]][unit-test-href]
-
 Zero-runtime Tailwind CSS responsive utilities with better developer experience.
 
 ## Features
@@ -52,103 +47,56 @@ export default defineConfig({
 <details>
 <summary>Next.js</summary><br>
 
+**Next.js 15 and earlier (Webpack)**
+
+For build-time transformation with zero runtime overhead:
+
 ```js
 // next.config.mjs
-import TwClassname from "cls-extended/webpack";
+import clsExtended from "@cls-extended/core/adapters/webpack";
 
 export default {
   webpack: (config) => {
-    config.plugins.push(TwClassname());
+    config.plugins = config.plugins || [];
+    config.plugins.push(clsExtended());
     return config;
   },
 };
 ```
 
-<br></details>
+**Next.js 16+ (Turbopack)**
 
-<details>
-<summary>Rollup</summary><br>
-
-```ts
-// rollup.config.js
-import TwClassname from "cls-extended/rollup";
-
-export default {
-  plugins: [TwClassname()],
-};
-```
-
-<br></details>
-
-<details>
-<summary>Rolldown</summary><br>
-
-```ts
-// rolldown.config.ts
-import TwClassname from "cls-extended/rolldown";
-
-export default {
-  plugins: [TwClassname()],
-};
-```
-
-<br></details>
-
-<details>
-<summary>esbuild</summary><br>
-
-```ts
-import { build } from "esbuild";
-import TwClassname from "cls-extended/esbuild";
-
-build({
-  plugins: [TwClassname()],
-});
-```
-
-<br></details>
-
-<details>
-<summary>Webpack</summary><br>
+Next.js 16 uses Turbopack by default, which doesn't yet support unplugin transformations. Use the runtime `cls()` function:
 
 ```js
-// webpack.config.js
-import TwClassname from "cls-extended/webpack";
-
+// next.config.mjs
 export default {
-  plugins: [TwClassname()],
+  // Turbopack is enabled by default
+  turbopack: {},
 };
 ```
 
-<br></details>
+```tsx
+// In your components
+import { cls } from "@cls-extended/core/api";
 
-<details>
-<summary>Rspack</summary><br>
-
-```ts
-// rspack.config.js
-import TwClassname from "cls-extended/rspack";
-
-export default {
-  plugins: [TwClassname()],
-};
+export default function Component() {
+  return (
+    <div className={cls("p-4", { md: "p-6", lg: "p-8" })}>
+      Content
+    </div>
+  );
+}
 ```
 
-<br></details>
+The `cls()` function provides runtime transformation with minimal overhead (~0.5KB). When unplugin adds Turbopack support, your code will automatically benefit from build-time optimization.
 
-<details>
-<summary>Farm</summary><br>
-
-```ts
-// farm.config.ts
-import TwClassname from "cls-extended/farm";
-
-export default {
-  plugins: [TwClassname()],
-};
-```
+See [examples/nextjs](./examples/nextjs) for a complete working example.
 
 <br></details>
+
+
+
 
 ## Usage
 
