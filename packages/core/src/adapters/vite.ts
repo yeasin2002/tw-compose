@@ -1,25 +1,8 @@
-/**
- * This entry file is for Vite plugin.
- *
- * @module
- */
+import type { UnpluginInstance } from 'unplugin'
+import type { Options } from '../core/options'
+import unplugin from '../index'
 
-import { unplugin } from '../index'
+const vitePlugin: UnpluginInstance<Options | undefined, false>['vite'] =
+  unplugin.vite
 
-/**
- * Vite plugin
- *
- * @example
- * ```ts
- * // vite.config.ts
- * import Starter from 'unplugin-starter/vite'
- *
- * export default defineConfig({
- *   plugins: [Starter()],
- * })
- * ```
- */
-const vite = unplugin.vite as typeof unplugin.vite
-export default vite
-export { vite as } from 'module.exports'
-
+export default vitePlugin

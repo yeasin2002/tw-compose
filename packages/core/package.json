@@ -2,27 +2,13 @@
   "name": "core",
   "type": "module",
   "version": "0.0.0",
-  "license": "MIT",
-  "keywords": [
-    "unplugin",
-    "vite",
-    "webpack",
-    "rspack",
-    "rollup",
-    "rolldown",
-    "esbuild",
-    "farm"
-  ],
   "exports": {
     ".": "./dist/index.js",
+    "./adapters/vite": "./dist/adapters/vite.js",
+    "./adapters/webpack": "./dist/adapters/webpack.js",
     "./api": "./dist/api.js",
-    "./esbuild": "./dist/esbuild.js",
-    "./farm": "./dist/farm.js",
-    "./rolldown": "./dist/rolldown.js",
-    "./rollup": "./dist/rollup.js",
-    "./rspack": "./dist/rspack.js",
-    "./vite": "./dist/vite.js",
-    "./webpack": "./dist/webpack.js",
+    "./core/options": "./dist/core/options.js",
+    "./types": "./dist/types/index.js",
     "./package.json": "./package.json"
   },
   "typesVersions": {
@@ -49,7 +35,6 @@
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
@@ -68,5 +53,14 @@
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   },
-  "prettier": "@sxzz/prettier-config"
+  "keywords": [
+    "unplugin",
+    "vite",
+    "webpack",
+    "rspack",
+    "rollup",
+    "rolldown",
+    "esbuild",
+    "farm"
+  ]
 }
