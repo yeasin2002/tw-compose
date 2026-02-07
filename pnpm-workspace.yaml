@@ -10,10 +10,12 @@ onlyBuiltDependencies:
   - sharp
   - unrs-resolver
 
-# from core
-trustPolicy: no-downgrade
-trustPolicyExclude:
-  - chokidar@4.0.3
+# from core - temporarily disabled for Next.js example setup
+# trustPolicy: no-downgrade
+# trustPolicyExclude:
+#   - chokidar@4.0.3
+#   - undici-types@6.21.0
+#   - eslint-import-resolver-typescript@3.10.1
 
 
 allowBuilds:
