@@ -1,8 +1,8 @@
-import type { UnpluginInstance } from 'unplugin'
-import type { Options } from '../core/options'
-import unplugin from '../index'
+import type { UnpluginInstance } from "unplugin";
+import unplugin from "..";
+import type { Options } from "../core/options";
 
-const vitePlugin: UnpluginInstance<Options | undefined, false>['vite'] =
-  unplugin.vite
+const vitePlugin: UnpluginInstance<Options | undefined, false>["vite"] =
+  unplugin.vite;
 
-export default vitePlugin
+export default vitePlugin;

@@ -1,9 +1,9 @@
-import { createUnplugin, type UnpluginInstance } from 'unplugin'
-import { resolveOptions, type Options } from './core/options'
+import { createUnplugin, type UnpluginInstance } from "unplugin";
+import { resolveOptions, type Options } from "./core/options";
 
 const unplugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (rawOptions = {}) => {
-    const options = resolveOptions(rawOptions)
+    const options = resolveOptions(rawOptions);
 
     const name = "cls-extended";
     return {
@@ -18,9 +18,9 @@ const unplugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
           // return transformationFunction(code, id, options)
         },
       },
-    }
+    };
   },
-)
+);
 
-export default unplugin
-export type { Options } from './core/options'
+export default unplugin;
+export type { Options } from "./core/options";
