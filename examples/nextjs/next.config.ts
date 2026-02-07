@@ -1,12 +1,10 @@
-import clsExtended from "@cls-extended/core/adapters/webpack";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  webpack: (config) => {
-    config.plugins = config.plugins || [];
-    config.plugins.push(clsExtended());
-    return config;
-  },
+  // Note: cls-extended plugin integration for Next.js 16+ with Turbopack
+  // is not yet supported. For now, use the runtime tw() function.
+  // The plugin works with Next.js + Webpack (Next.js 15 and earlier).
+  turbopack: {},
 };
 
 export default nextConfig;
