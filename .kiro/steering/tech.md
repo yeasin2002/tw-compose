@@ -91,7 +91,7 @@ packages:
 
 ```typescript
 createUnplugin((options) => ({
-  name: "tw-compose",
+  name: "cls-extended",
   transform: {
     /* ... */
   },
@@ -369,22 +369,22 @@ pnpm format
 
 ```bash
 # Build only the plugin
-pnpm --filter tw-compose build
+pnpm --filter cls-extended build
 
 # Run example in dev mode
 pnpm --filter @examples/vite-react dev
 
 # Run plugin tests (single run)
-pnpm --filter tw-compose test --run
+pnpm --filter cls-extended test --run
 
 # Run plugin tests (watch mode)
-pnpm --filter tw-compose test
+pnpm --filter cls-extended test
 
 # Type check plugin only
-pnpm --filter tw-compose typecheck
+pnpm --filter cls-extended typecheck
 
 # Lint plugin only
-pnpm --filter tw-compose lint
+pnpm --filter cls-extended lint
 ```
 
 ### Development Workflow
@@ -394,13 +394,13 @@ pnpm --filter tw-compose lint
 pnpm install
 
 # Build plugin
-pnpm --filter tw-compose build
+pnpm --filter cls-extended build
 
 # Start example (requires plugin build first)
 pnpm --filter @examples/vite-react dev
 
 # Run tests in watch mode
-pnpm --filter tw-compose test
+pnpm --filter cls-extended test
 
 # Build everything
 pnpm build

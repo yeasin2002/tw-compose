@@ -1,5 +1,5 @@
 {
-  "name": "tw-compose",
+  "name": "cls-extended",
   "private": true,
   "scripts": {
     "build": "turbo run build",

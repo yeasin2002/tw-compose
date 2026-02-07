@@ -1,16 +1,16 @@
-# tw-compose: Project Analysis & Technical Documentation
+# cls-extended: Project Analysis & Technical Documentation
 
 ## Executive Summary
 
-**Project Name:** tw-compose  
+**Project Name:** cls-extended  
 **Project Type:** Open-source build tool plugin  
 **Architecture:** Turborepo monorepo with pnpm workspaces  
 **Status:** ✅ Production-ready, fully implemented  
-**Repository:** https://github.com/yeasin2002/tw-compose
+**Repository:** https://github.com/yeasin2002/cls-extended
 
 ### Project Vision
 
-tw-compose addresses a specific developer experience pain point in the Tailwind CSS ecosystem: the verbosity and maintainability challenges of responsive utility classes. By transforming a cleaner, object-based syntax into standard Tailwind classes at build time, the plugin achieves zero runtime overhead while significantly improving code readability and maintainability.
+cls-extended addresses a specific developer experience pain point in the Tailwind CSS ecosystem: the verbosity and maintainability challenges of responsive utility classes. By transforming a cleaner, object-based syntax into standard Tailwind classes at build time, the plugin achieves zero runtime overhead while significantly improving code readability and maintainability.
 
 ### Business Value Proposition
 
@@ -248,7 +248,7 @@ This approach provides:
 
 - Tree-shaking optimization for consumers
 - Smaller bundle sizes (users only import what they need)
-- Clear import paths (`tw-compose/vite`)
+- Clear import paths (`cls-extended/vite`)
 - Better IDE autocomplete
 
 **Output Configuration:**
@@ -654,7 +654,7 @@ The project maintains comprehensive documentation across multiple formats:
 
 ## Conclusion
 
-tw-compose represents a mature, production-ready solution to a real developer experience problem in the Tailwind CSS ecosystem. The project demonstrates:
+cls-extended represents a mature, production-ready solution to a real developer experience problem in the Tailwind CSS ecosystem. The project demonstrates:
 
 - **Technical Excellence**: Clean architecture, comprehensive testing, modern tooling
 - **Operational Maturity**: CI/CD automation, monorepo structure, quality assurance

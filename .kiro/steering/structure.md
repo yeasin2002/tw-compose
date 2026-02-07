@@ -11,7 +11,7 @@ This is a **Turborepo monorepo** with **pnpm workspaces**, migrated from a monol
 ## Monorepo Layout
 
 ```
-tw-compose/
+cls-extended/
 ├── packages/
 │   └── core/                      # Main plugin package (PUBLISHABLE)
 │       ├── src/
@@ -214,10 +214,10 @@ The plugin uses a "shallow" entry mode with 9 separate entry points:
 
 ```typescript
 // In build config
-import twClassname from "tw-compose/vite";
+import twClassname from "cls-extended/vite";
 
 // In application code
-import { tw } from "tw-compose/api";
+import { tw } from "cls-extended/api";
 ```
 
 ### 5. Workspace Protocol
@@ -227,7 +227,7 @@ import { tw } from "tw-compose/api";
 ```json
 {
   "dependencies": {
-    "tw-compose": "workspace:*"
+    "cls-extended": "workspace:*"
   }
 }
 ```
@@ -319,7 +319,7 @@ packages/core/src/**/*.ts      # Source files
 pnpm install
 
 # Build plugin
-pnpm --filter tw-compose build
+pnpm --filter cls-extended build
 
 # Run example
 pnpm --filter @examples/vite-react dev

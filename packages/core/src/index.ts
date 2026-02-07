@@ -5,7 +5,7 @@ const unplugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (rawOptions = {}) => {
     const options = resolveOptions(rawOptions)
 
-    const name = ''
+    const name = "cls-extended";
     return {
       name,
 

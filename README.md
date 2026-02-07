@@ -1,4 +1,4 @@
-# tw-compose
+# cls-extended
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -32,7 +32,7 @@ No runtime overhead, just static strings.
 ## Installation
 
 ```bash
-npm i -D tw-compose
+npm i -D cls-extended
 ```
 
 <details>
@@ -40,7 +40,7 @@ npm i -D tw-compose
 
 ```ts
 // vite.config.ts
-import TwClassname from "tw-compose/vite";
+import TwClassname from "cls-extended/vite";
 
 export default defineConfig({
   plugins: [TwClassname()],
@@ -54,7 +54,7 @@ export default defineConfig({
 
 ```js
 // next.config.mjs
-import TwClassname from "tw-compose/webpack";
+import TwClassname from "cls-extended/webpack";
 
 export default {
   webpack: (config) => {
@@ -71,7 +71,7 @@ export default {
 
 ```ts
 // rollup.config.js
-import TwClassname from "tw-compose/rollup";
+import TwClassname from "cls-extended/rollup";
 
 export default {
   plugins: [TwClassname()],
@@ -85,7 +85,7 @@ export default {
 
 ```ts
 // rolldown.config.ts
-import TwClassname from "tw-compose/rolldown";
+import TwClassname from "cls-extended/rolldown";
 
 export default {
   plugins: [TwClassname()],
@@ -99,7 +99,7 @@ export default {
 
 ```ts
 import { build } from "esbuild";
-import TwClassname from "tw-compose/esbuild";
+import TwClassname from "cls-extended/esbuild";
 
 build({
   plugins: [TwClassname()],
@@ -113,7 +113,7 @@ build({
 
 ```js
 // webpack.config.js
-import TwClassname from "tw-compose/webpack";
+import TwClassname from "cls-extended/webpack";
 
 export default {
   plugins: [TwClassname()],
@@ -127,7 +127,7 @@ export default {
 
 ```ts
 // rspack.config.js
-import TwClassname from "tw-compose/rspack";
+import TwClassname from "cls-extended/rspack";
 
 export default {
   plugins: [TwClassname()],
@@ -141,7 +141,7 @@ export default {
 
 ```ts
 // farm.config.ts
-import TwClassname from "tw-compose/farm";
+import TwClassname from "cls-extended/farm";
 
 export default {
   plugins: [TwClassname()],
@@ -153,7 +153,7 @@ export default {
 ## Usage
 
 ```tsx
-import { tw } from "tw-compose";
+import { tw } from "cls-extended";
 
 function Component() {
   return (
@@ -233,9 +233,9 @@ See [PROJECT-DETAILS.md](./PROJECT-DETAILS.md) for complete implementation detai
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/tw-compose.svg
-[npm-version-href]: https://npmjs.com/package/tw-compose
-[npm-downloads-src]: https://img.shields.io/npm/dm/tw-compose
-[npm-downloads-href]: https://www.npmcharts.com/compare/tw-compose?interval=30
-[unit-test-src]: https://github.com/sxzz/tw-compose/actions/workflows/unit-test.yml/badge.svg
-[unit-test-href]: https://github.com/sxzz/tw-compose/actions/workflows/unit-test.yml
+[npm-version-src]: https://img.shields.io/npm/v/cls-extended.svg
+[npm-version-href]: https://npmjs.com/package/cls-extended
+[npm-downloads-src]: https://img.shields.io/npm/dm/cls-extended
+[npm-downloads-href]: https://www.npmcharts.com/compare/cls-extended?interval=30
+[unit-test-src]: https://github.com/sxzz/cls-extended/actions/workflows/unit-test.yml/badge.svg
+[unit-test-href]: https://github.com/sxzz/cls-extended/actions/workflows/unit-test.yml

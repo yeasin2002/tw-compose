@@ -4,13 +4,13 @@ inclusion: always
 
 # Product Overview
 
-tw-compose is a production-ready, universal build plugin that transforms responsive Tailwind CSS syntax at build time with zero runtime overhead. Built on the unplugin framework, it provides seamless compatibility across all major JavaScript build tools.
+cls-extended is a production-ready, universal build plugin that transforms responsive Tailwind CSS syntax at build time with zero runtime overhead. Built on the unplugin framework, it provides seamless compatibility across all major JavaScript build tools.
 
 ## Project Status
 
 **Status**: ✅ Production Ready (v1.0.0)  
 **Architecture**: Turborepo monorepo with pnpm workspaces  
-**Repository**: https://github.com/yeasin2002/tw-compose-protoype
+**Repository**: https://github.com/yeasin2002/cls-extended-protoype
 
 ## What It Does
 
@@ -71,7 +71,7 @@ tw("text-xl font-bold", { md: "text-2xl", lg: "text-3xl" });
 
 ### Package Details
 
-- **Name**: tw-compose
+- **Name**: cls-extended
 - **Version**: 1.0.0
 - **Bundle Size**: ~8.26 KB (gzipped: ~3.5 KB)
 - **Runtime Impact**: 0 KB (build-time only)
@@ -117,14 +117,14 @@ tw("text-xl font-bold", { md: "text-2xl", lg: "text-3xl" });
 ### Installation
 
 ```bash
-npm install -D tw-compose
+npm install -D cls-extended
 ```
 
 ### Basic Usage (Vite)
 
 ```typescript
 // vite.config.ts
-import twClassname from "tw-compose/vite";
+import twClassname from "cls-extended/vite";
 
 export default defineConfig({
   plugins: [twClassname()],
@@ -134,7 +134,7 @@ export default defineConfig({
 ### In Your Components
 
 ```tsx
-import { tw } from "tw-compose/api";
+import { tw } from "cls-extended/api";
 
 function Component() {
   return <div className={tw("p-4", { md: "p-6", lg: "p-8" })}>Content</div>;
