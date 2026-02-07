@@ -4,17 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
-    inputs:
-      release_type:
-        description: 'Release type (leave empty for auto)'
-        required: false
-        type: choice
-        options:
-          - ''
-          - patch
-          - minor
-          - major
 
 permissions:
   contents: write
@@ -51,29 +40,14 @@ jobs:
       - name: Build package
         run: pnpm --filter cls-extended build
 
-    # Not Test for Now! 
+      # Not Test for Now! 
       # - name: Run tests
       #   run: pnpm --filter cls-extended test --run
 
-      - name: Release
+      - name: Release with semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          RELEASE_TYPE: ${{ github.event.inputs.release_type }}
         run: |
           cd packages/core
-          
-          # If triggered by tag, extract version
-          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            VERSION="${GITHUB_REF#refs/tags/v}"
-            echo "Releasing version from tag: $VERSION"
-            npx semantic-release@25
-          # If manual trigger with release type
-          elif [[ -n "$RELEASE_TYPE" ]]; then
-            echo "Manual release with type: $RELEASE_TYPE"
-            npx semantic-release@25
-          # Otherwise, auto-detect
-          else
-            echo "Manual release with auto-detection"
-            npx semantic-release@25
-          fi
+          npx semantic-release@25
