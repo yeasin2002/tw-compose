@@ -4,6 +4,7 @@ import { findClsCalls, type ClsCallExpression } from "./parser";
 
 export interface TransformResult {
   code: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   map: any;
 }
 

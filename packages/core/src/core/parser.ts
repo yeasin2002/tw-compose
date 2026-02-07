@@ -21,6 +21,7 @@ export function findClsCalls(code: string): ClsCallExpression[] {
 
   const clsCalls: ClsCallExpression[] = [];
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function traverse(node: any) {
     if (!node || typeof node !== "object") return;
 
@@ -83,7 +84,6 @@ export function findClsCalls(code: string): ClsCallExpression[] {
     }
 
     // Traverse all properties
-    // eslint-disable-next-line no-restricted-syntax
     for (const key in node) {
       if (key === "loc" || key === "range" || key === "tokens") continue;
       const value = node[key];
