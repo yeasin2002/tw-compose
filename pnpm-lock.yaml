@@ -69,10 +69,16 @@ importers:
 
   packages/core:
     dependencies:
+      '@babel/parser':
+        specifier: ^7.29.0
+        version: 7.29.0
       unplugin:
         specifier: ^3.0.0
         version: 3.0.0
     devDependencies:
+      '@babel/types':
+        specifier: ^7.29.0
+        version: 7.29.0
       '@sxzz/eslint-config':
         specifier: ^7.6.0
         version: 7.6.0(@typescript-eslint/eslint-plugin@8.54.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)(typescript@5.9.3)

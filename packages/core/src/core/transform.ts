@@ -1,0 +1,64 @@
+import MagicString from 'magic-string'
+import type { OptionsResolved } from './options'
+import { findTwCalls, type ClsCallExpression } from "./parser";
+
+export interface TransformResult {
+  code: string
+  map: any
+}
+
+export function transformTwCalls(
+  code: string,
+  _id: string,
+  options: OptionsResolved,
+): TransformResult | null {
+  // Find all tw() calls
+  const twCalls = findTwCalls(code)
+
+  if (twCalls.length === 0) {
+    return null
+  }
+
+  const s = new MagicString(code)
+
+  // Process each tw() call
+  for (const call of twCalls) {
+    const transformedString = generateClassString(call, options)
+
+    // Replace the entire tw() call with a static string
+    s.overwrite(call.start, call.end, `"${transformedString}"`)
+  }
+
+  return {
+    code: s.toString(),
+    map: options.sourcemap ? s.generateMap({ hires: true }) : null,
+  }
+}
+
+function generateClassString(
+  call: ClsCallExpression,
+  options: OptionsResolved,
+): string {
+  const { baseClasses, responsiveClasses } = call;
+  const parts: string[] = [baseClasses];
+
+  // Process responsive classes
+  for (const [breakpoint, classes] of Object.entries(responsiveClasses)) {
+    // Validate breakpoint
+    if (!options.breakpoints[breakpoint] && !options.enableVariants) {
+      console.warn(`Unknown breakpoint: ${breakpoint}`);
+      continue;
+    }
+
+    // Split classes and prefix each one
+    const prefixedClasses = classes
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((cls) => `${breakpoint}:${cls}`)
+      .join(" ");
+
+    parts.push(prefixedClasses);
+  }
+
+  return parts.filter(Boolean).join(" ");
+}
