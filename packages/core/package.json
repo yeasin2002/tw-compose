@@ -10,6 +10,7 @@
     "./core/options": "./dist/core/options.js",
     "./core/parser": "./dist/core/parser.js",
     "./core/transform": "./dist/core/transform.js",
+    "./unplugin-factory": "./dist/unplugin-factory.js",
     "./package.json": "./package.json"
   },
   "typesVersions": {
