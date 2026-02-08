@@ -12,7 +12,7 @@ Zero-runtime Tailwind CSS responsive class transformer. Write cleaner responsive
 - 🔧 **Universal** - Works with Vite, Webpack, Rollup, esbuild, Rspack, Rolldown, and Farm
 - 📦 **Tiny Bundle** - ~8KB package
 - 🔒 **Type Safe** - Full TypeScript support with intelligent autocomplete
-- 🗺️ **Source Maps** - Maintains accurate debugging information
+
 
 ## Installation
 
