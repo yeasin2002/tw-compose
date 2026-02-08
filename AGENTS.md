@@ -38,10 +38,6 @@ This compiles at build time to:
 
 The plugin uses Babel parser to detect `cls()` calls, transforms them via AST manipulation, and replaces them with static strings before the code reaches production.
 
-
-
-
-
 # Project Structure
 
 ## Monorepo Layout
@@ -161,8 +157,6 @@ packages/typescript-config/
 - Source maps maintained for debugging
 - Type definitions generated alongside JavaScript
 - Multiple entry points via conditional exports
-
-
 
 # Technology Stack
 

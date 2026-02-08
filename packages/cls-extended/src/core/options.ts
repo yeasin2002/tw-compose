@@ -1,4 +1,4 @@
-import type { FilterPattern } from 'unplugin'
+import type { FilterPattern } from "unplugin";
 
 export interface Options {
   /**

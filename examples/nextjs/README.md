@@ -21,11 +21,7 @@ export default nextConfig;
 import { cls } from "cls-extended";
 
 export default function Component() {
-  return (
-    <div className={cls("p-4", { md: "p-6", lg: "p-8" })}>
-      Content
-    </div>
-  );
+  return <div className={cls("p-4", { md: "p-6", lg: "p-8" })}>Content</div>;
 }
 ```
 

@@ -13,7 +13,6 @@ Zero-runtime Tailwind CSS responsive class transformer. Write cleaner responsive
 - 📦 **Tiny Bundle** - ~8KB package
 - 🔒 **Type Safe** - Full TypeScript support with intelligent autocomplete
 
-
 ## Installation
 
 ```bash
@@ -62,17 +61,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Note: cls-extended plugin integration for Next.js 16+ with Turbopack is not yet supported.
   // For now, use the runtime cls() function directly.
-  // leave the config as it is! 
+  // leave the config as it is!
   turbopack: {},
 };
 
 export default nextConfig;
 ```
 
-
 <details>
   <summary> <h3 style="display: inline;" > Check Other Adapters (rspack, rolldown, farm etc.)  </h3> </summary>
-
 
 ### Webpack
 
@@ -84,7 +81,6 @@ export default {
   plugins: [clsExtended()],
 };
 ```
-
 
 ### Rollup
 
@@ -119,9 +115,7 @@ export default {
 };
 ```
 
-
 </details>
-
 
 ## Usage
 
@@ -147,9 +141,7 @@ function Component() {
 **Compiles to:**
 
 ```tsx
-<div className="text-xl font-bold md:text-2xl lg:text-3xl">
-  Responsive Text
-</div>
+<div className="text-xl font-bold md:text-2xl lg:text-3xl">Responsive Text</div>
 ```
 
 ### Multiple Responsive Classes
@@ -212,7 +204,7 @@ function Button({ variant, size }) {
         {
           md: size === "large" ? "px-6 py-3 text-lg" : "px-4 py-2",
           lg: "px-8 py-4 text-xl",
-        }
+        },
       )}
     >
       Click me
@@ -253,13 +245,13 @@ Transform responsive Tailwind classes at build time.
 
 **Supported Breakpoints:**
 
-| Breakpoint | Min Width | Description          |
-| ---------- | --------- | -------------------- |
-| `sm`       | 640px     | Small devices        |
-| `md`       | 768px     | Medium devices       |
-| `lg`       | 1024px    | Large devices        |
-| `xl`       | 1280px    | Extra large devices  |
-| `2xl`      | 1536px    | 2X extra large       |
+| Breakpoint | Min Width | Description         |
+| ---------- | --------- | ------------------- |
+| `sm`       | 640px     | Small devices       |
+| `md`       | 768px     | Medium devices      |
+| `lg`       | 1024px    | Large devices       |
+| `xl`       | 1280px    | Extra large devices |
+| `2xl`      | 1536px    | 2X extra large      |
 
 **Returns:**
 
@@ -414,7 +406,7 @@ const classes = cls("p-4", {
 ### Build Performance
 
 - **File transformation**: <1ms per file
-- **AST parsing**: ~0.3ms per file  
+- **AST parsing**: ~0.3ms per file
 - **Source map generation**: ~0.1ms per file
 - **Memory usage**: <10MB for typical projects
 
@@ -424,9 +416,6 @@ Check out the working examples:
 
 - [Vite + React](../../examples/vite-react) - Basic Vite setup
 - [Next.js](../../examples/nextjs) - Next.js integration
-
-
-
 
 ## Contributing
 
@@ -443,4 +432,3 @@ Contributions are welcome! See the [Root README](../../README.md) for developmen
 - [npm Package](https://www.npmjs.com/package/cls-extended)
 - [GitHub Repository](https://github.com/yeasin2002/cls-extended)
 - [Report Issues](https://github.com/yeasin2002/cls-extended/issues)
-

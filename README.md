@@ -74,9 +74,7 @@ function Component() {
 **Compiles to:**
 
 ```tsx
-<div className="text-xl font-bold md:text-2xl lg:text-3xl">
-  Responsive Text
-</div>
+<div className="text-xl font-bold md:text-2xl lg:text-3xl">Responsive Text</div>
 ```
 
 ## 📖 How It Works
@@ -88,6 +86,7 @@ The plugin uses AST transformation to detect `cls()` calls during the build proc
 3. **Output**: Generates standard Tailwind classes with zero runtime code
 
 This means:
+
 - ✅ No runtime JavaScript added to your bundle
 - ✅ Transformation happens once during build
 - ✅ Production code contains only plain strings

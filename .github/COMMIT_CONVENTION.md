@@ -16,17 +16,17 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/) f
 
 ### Types
 
-| Type | Description | Release |
-|------|-------------|---------|
-| `feat` | New feature | Minor (0.x.0) |
-| `fix` | Bug fix | Patch (0.0.x) |
-| `docs` | Documentation only | None |
-| `style` | Code style/formatting | Patch (0.0.x) |
-| `refactor` | Code refactoring | Patch (0.0.x) |
-| `perf` | Performance improvement | Patch (0.0.x) |
-| `test` | Adding tests | None |
-| `chore` | Maintenance | None |
-| `ci` | CI configuration | None |
+| Type       | Description             | Release       |
+| ---------- | ----------------------- | ------------- |
+| `feat`     | New feature             | Minor (0.x.0) |
+| `fix`      | Bug fix                 | Patch (0.0.x) |
+| `docs`     | Documentation only      | None          |
+| `style`    | Code style/formatting   | Patch (0.0.x) |
+| `refactor` | Code refactoring        | Patch (0.0.x) |
+| `perf`     | Performance improvement | Patch (0.0.x) |
+| `test`     | Adding tests            | None          |
+| `chore`    | Maintenance             | None          |
+| `ci`       | CI configuration        | None          |
 
 ### Breaking Changes
 
@@ -62,7 +62,7 @@ Closes #123
 feat: add support for custom breakpoints
 ```
 
-```bash
+````bash
 feat(config): add custom breakpoint configuration
 
 Users can now define custom breakpoints in the plugin options:
@@ -75,10 +75,11 @@ clsExtended({
     desktop: '1024px'
   }
 })
-```
+````
 
 Closes #45
-```
+
+````
 
 ### Major Release (x.0.0)
 
@@ -91,19 +92,21 @@ The old `options` parameter is now `config`. Update your configuration:
 Before:
 ```js
 clsExtended({ options: { ... } })
-```
+````
 
 After:
+
 ```js
 clsExtended({ config: { ... } })
 ```
-```
+
+````
 
 ### No Release
 
 ```bash
 docs: update README with new examples
-```
+````
 
 ```bash
 chore: update dependencies to latest versions
@@ -127,6 +130,7 @@ Common scopes for this project:
 - `ci` - CI/CD
 
 Example:
+
 ```bash
 feat(parser): improve JSX parsing performance
 fix(webpack): resolve compatibility issue with webpack 5
@@ -151,11 +155,13 @@ Closes #42
 ```
 
 Or use an editor:
+
 ```bash
 git commit
 ```
 
 Then write:
+
 ```
 feat: add hover variant support
 
@@ -204,6 +210,7 @@ npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ### Good Commits
 
 ✅ Clear and concise
+
 ```bash
 feat: add dark mode support
 fix: resolve memory leak in parser
@@ -211,6 +218,7 @@ docs: add migration guide
 ```
 
 ✅ Descriptive body
+
 ```bash
 feat: add custom breakpoint support
 
@@ -219,6 +227,7 @@ This provides more flexibility for different design systems.
 ```
 
 ✅ Reference issues
+
 ```bash
 fix: handle edge case in JSX parsing
 
@@ -229,6 +238,7 @@ Fixes #124
 ### Bad Commits
 
 ❌ Vague messages
+
 ```bash
 update stuff
 fix bug
@@ -237,12 +247,14 @@ WIP
 ```
 
 ❌ Missing type
+
 ```bash
 added new feature
 fixed the parser
 ```
 
 ❌ Wrong type
+
 ```bash
 feat: fix typo in README  # Should be docs:
 fix: add new feature      # Should be feat:
@@ -283,6 +295,7 @@ Create `.gitmessage` in your home directory:
 ```
 
 Configure git to use it:
+
 ```bash
 git config --global commit.template ~/.gitmessage
 ```
