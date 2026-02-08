@@ -2,7 +2,23 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/yeasin2002/cls-extended/compare/v1.1.1...HEAD)
+#### [Unreleased](https://github.com/yeasin2002/cls-extended/compare/v1.1.2...HEAD)
+
+#### [v1.1.2](https://github.com/yeasin2002/cls-extended/compare/v1.1.1...v1.1.2)
+
+> 8 February 2026
+
+- doc: Rename `tw` API and plugin to `cls`, remove obsolete project documentation, and add example READMEs. [`76032f3`](https://github.com/yeasin2002/cls-extended/commit/76032f34bb12cc1f21b944161e5f4bad4ec15ee8)
+- 🔧 Chore: removed kiro steering rules [`dc19b43`](https://github.com/yeasin2002/cls-extended/commit/dc19b4315ad052e863813b6d0ac7f42e13148eab)
+- updated readme [`8bbcf6e`](https://github.com/yeasin2002/cls-extended/commit/8bbcf6eae58ad8f7f801d7d87bb36da2f9d7971f)
+- 🔧 Chore: added AGENT rules [`80e9fbb`](https://github.com/yeasin2002/cls-extended/commit/80e9fbb7b913f686d5e4546088e28706defa8259)
+- 🔧 Chore: moved tooling package to pkgs [`b37ee35`](https://github.com/yeasin2002/cls-extended/commit/b37ee352bd6b1eaba023edd3ee3cfa26091963cd)
+- 📚 Docs: updated steering rules [`ffec5dc`](https://github.com/yeasin2002/cls-extended/commit/ffec5dc22b15ee87beae6bfb8f629d8b0f8fee0f)
+- ✨ Feature: update latest version on example repos [`bd3e4d7`](https://github.com/yeasin2002/cls-extended/commit/bd3e4d7a7faaffe607a409b66785c3b0da05a882)
+- updated README [`a2d0c75`](https://github.com/yeasin2002/cls-extended/commit/a2d0c759607e81a785d88fedbb043de30a64e092)
+- 🔧 Chore: update CHANGELOG.md for v1.1.1 [skip ci] [`a366b29`](https://github.com/yeasin2002/cls-extended/commit/a366b293da694d7944ecef14e99988c4d0e14c4f)
+- ♻️ Refactor: converted both example packages from npm dependencies to workspace references for cls-extended [`1645243`](https://github.com/yeasin2002/cls-extended/commit/16452434bb2fb1472c6c1833ed8d35a6184c4cb4)
+- updated docs [`39d8e6b`](https://github.com/yeasin2002/cls-extended/commit/39d8e6bf1bab62bce500d0d6f9b04b19e15056a8)
 
 #### [v1.1.1](https://github.com/yeasin2002/cls-extended/compare/v1.1.0...v1.1.1)
 
