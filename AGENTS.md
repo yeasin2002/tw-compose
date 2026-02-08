@@ -122,14 +122,12 @@ cls-extended/
 │       ├── tsconfig.json          # TypeScript config
 │       ├── tsdown.config.ts       # Build configuration
 │       └── README.md              # Package documentation
-│
-├── tooling/
-│   ├── eslint-config/             # Shared ESLint configuration
-│   │   ├── base.js
-│   │   ├── next.js
-│   │   ├── react-internal.js
-│   │   └── package.json
-│   └── typescript-config/         # Shared TypeScript configuration
+│       ├── eslint-config/             # Shared ESLint configuration
+│       ├── base.js
+│       ├── next.js
+│       ├── react-internal.js
+│       └── package.json
+│       └── typescript-config/         # Shared TypeScript configuration
 │       ├── base.json
 │       ├── nextjs.json
 │       ├── react-library.json
@@ -153,26 +151,13 @@ cls-extended/
 │       ├── vite.config.ts
 │       └── index.html
 │
-├── tutorial/                      # 10-chapter educational content
-│   ├── 01-introduction.md
-│   ├── 02-unplugin-api.md
-│   ├── 03-project-setup.md
-│   ├── 04-package-config.md
-│   ├── 05-cls-extended-implementation.md
-│   ├── 06-ast-transformation.md
-│   ├── 07-build-tool-exports.md
-│   ├── 08-testing.md
-│   ├── 09-typescript-config.md
-│   └── 10-build-publish.md
-│
 ├── .github/
 │   ├── workflows/                 # CI/CD automation
 │   │   ├── ci.yml                 # Main CI pipeline
 │   │   ├── unit-test.yml          # Multi-version testing
 │   │   ├── release.yml            # NPM publishing
 │   │   ├── release-commit.yml     # Preview publishing
-│   │   ├── turborepo-cache.yml    # Cache demonstration
-│   │   └── example-build.yml      # Example validation
+│   │   └── turborepo-cache.yml    # Cache demonstration
 │   └── [documentation files]
 │
 ├── package.json                   # Root package (PRIVATE)
@@ -186,8 +171,7 @@ cls-extended/
 
 **Workspace Structure:**
 
-- **packages/**: Publishable packages (cls-extended)
-- **tooling/**: Internal shared configurations
+- **packages/**: Publishable packages (cls-extended) and Internal shared configurations (tooling)
 - **examples/**: Demo applications (private)
 - **tutorial/**: Documentation and guides
 
